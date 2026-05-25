@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../includes/db.php';
+require_once 'includes/db.php';
 
 // Только админ имеет доступ
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') exit;

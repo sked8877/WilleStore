@@ -27,7 +27,7 @@ include 'includes/header.php';
 <main>
     <!-- Хлебные крошки / Назад -->
     <div style="padding: 20px 40px; border-bottom: var(--border);">
-        <a href="/ws/catalog.php" style="font-weight: 800; text-transform: uppercase; color: var(--black); text-decoration: none;">
+        <a href="catalog.php" style="font-weight: 800; text-transform: uppercase; color: var(--black); text-decoration: none;">
             ← НАЗАД В КАТАЛОГ / <?php echo htmlspecialchars($product['category_name'] ?? 'БЕЗ КАТЕГОРИИ'); ?>
         </a>
     </div>
@@ -35,7 +35,7 @@ include 'includes/header.php';
     <div class="product-detail-grid">
         <!-- ЛЕВАЯ КОЛОНКА: ФОТО -->
         <div class="product-detail-image">
-            <img src="/ws/uploads/<?php echo $product['image_url']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
+            <img src="uploads/<?php echo $product['image_url']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
         </div>
 
         <!-- ПРАВАЯ КОЛОНКА: ИНФО -->
@@ -77,8 +77,8 @@ include 'includes/header.php';
             <?php endif; ?>
             
             <div style="margin-top: 40px; padding: 20px; background: var(--gray); font-weight: 700; text-transform: uppercase; font-size: 12px;">
-                ⚡ ГАРАНТИЯ ПРЕМИУМ-РЕСЕЛЛЕРА 1 ГОД <br>
-                🚀 БЫСТРАЯ ДОСТАВКА В ТЕЧЕНИЕ 2 ЧАСОВ
+                ГАРАНТИЯ ПРЕМИУМ-РЕСЕЛЛЕРА 1 ГОД <br>
+                БЫСТРАЯ ДОСТАВКА В ТЕЧЕНИЕ 2 ЧАСОВ
             </div>
         </div>
     </div>

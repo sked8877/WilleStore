@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ВАШ ЗАКАЗ #<?php echo $order_id; ?> ПРИНЯТ В ОБРАБОТКУ.<br>
                     ТОВАРЫ УЖЕ УПАКОВЫВАЮТСЯ.
                 </p>
-                <a href="/ws/catalog.php" class="btn-buy" style="display: inline-block; width: auto; padding: 20px 60px; text-decoration: none;">ВЕРНУТЬСЯ В МАГАЗИН</a>
+                <a href="catalog.php" class="btn-buy" style="display: inline-block; width: auto; padding: 20px 60px; text-decoration: none;">ВЕРНУТЬСЯ В МАГАЗИН</a>
             </div>
         </main>
         <?php
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
     // Если зашли на файл просто так без POST-запроса
-    header("Location: /ws/cart.php");
+    header("Location: cart.php");
     exit;
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once 'includes/db.php';
+require_once 'includes/functions.php';
 
 $error = '';
 
@@ -47,4 +47,4 @@ include '../includes/header.php';
     </a>
 </main>
 
-<?php include '../includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

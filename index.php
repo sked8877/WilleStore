@@ -33,9 +33,9 @@ include 'includes/header.php';
 
     <!-- 3. КАТЕГОРИИ-ГИГАНТЫ -->
     <section class="cat-grid">
-        <a href="/ws/catalog.php?category=1" class="cat-tile">ТЕЛЕФОНЫ</a>
-        <a href="/ws/catalog.php?category=2" class="cat-tile">НАУШНИКИ</a>
-        <a href="/ws/catalog.php?category=3" class="cat-tile">АКСЕССУАРЫ</a>
+        <a href="catalog.php?category=1" class="cat-tile">ТЕЛЕФОНЫ</a>
+        <a href="catalog.php?category=2" class="cat-tile">НАУШНИКИ</a>
+        <a href="catalog.php?category=3" class="cat-tile">АКСЕССУАРЫ</a>
     </section>
 
     <!-- 4. БЛОКИ ДОВЕРИЯ -->
@@ -59,12 +59,12 @@ include 'includes/header.php';
         <div class="product-grid">
             <?php foreach ($new_products as $product): ?>
                 <div class="product-card">
-                    <a href="/ws/product.php?id=<?php echo $product['id']; ?>">
-                        <img src="/ws/uploads/<?php echo $product['image_url']; ?>" alt="<?php echo $product['title']; ?>">
+                    <a href="product.php?id=<?php echo $product['id']; ?>">
+                        <img src="uploads/<?php echo $product['image_url']; ?>" alt="<?php echo $product['title']; ?>">
                     </a>
                     
                     <div class="product-info">
-                        <a href="/ws/product.php?id=<?php echo $product['id']; ?>" style="text-decoration: none; color: inherit;">
+                        <a href="product.php?id=<?php echo $product['id']; ?>" style="text-decoration: none; color: inherit;">
                             <div class="product-title"><?php echo htmlspecialchars($product['title']); ?></div>
                         </a>
                         

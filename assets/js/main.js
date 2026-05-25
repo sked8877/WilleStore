@@ -6,7 +6,7 @@ function addToCart(productId, btnElement) {
     // Добавляем лог в консоль для отладки (F12 -> Console)
     console.log("Добавление товара ID:", productId);
 
-    fetch('/ws/ajax/add_to_cart.php', {
+    fetch('/ajax/add_to_cart.php', {
         method: 'POST',
         body: formData
     })
@@ -90,7 +90,7 @@ if (document.getElementById('chat-window')) {
         const formData = new FormData();
         formData.append('message', chatInput.value);
 
-        fetch('/ws/ajax/chat_handler.php', {
+        fetch('/ajax/chat_handler.php', {
             method: 'POST',
             body: formData
         }).then(() => {

@@ -4,7 +4,7 @@ require_once 'includes/functions.php';
 
 if (isset($_GET['clear'])) {
     unset($_SESSION['cart']);
-    header("Location: /ws/cart.php");
+    header("Location: cart.php");
     exit;
 }
 
@@ -23,7 +23,7 @@ $total_sum = 0;
     <?php if (empty($cart)): ?>
         <div style="padding: 100px 40px; text-align: center;">
             <p style="font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 30px;">Тут пока ничего нет.</p>
-            <a href="/ws/catalog.php" class="btn-buy" style="display: inline-block; width: auto; padding: 20px 60px; text-decoration: none;">ПЕРЕЙТИ В КАТАЛОГ</a>
+            <a href="catalog.php" class="btn-buy" style="display: inline-block; width: auto; padding: 20px 60px; text-decoration: none;">ПЕРЕЙТИ В КАТАЛОГ</a>
         </div>
     <?php else: ?>
         <table>
@@ -40,12 +40,11 @@ $total_sum = 0;
                 <?php foreach ($cart as $id => $item): 
                     $subtotal = $item['price'] * $item['quantity'];
                     $total_sum += $subtotal;
-                    // Путь к фото
                     $img = (!empty($item['image'])) ? $item['image'] : 'default.jpg';
                 ?>
                     <tr>
                         <td style="text-align: center;">
-                            <img src="/ws/uploads/<?php echo $img; ?>" 
+                            <img src="uploads/<?php echo $img; ?>" 
                                  class="cart-thumb" 
                                  style="width: 80px; height: 80px; object-fit: contain; border: 1px solid #000; background: #fff;"
                                  onerror="this.src='https://via.placeholder.com/80x80?text=W'">
@@ -74,11 +73,11 @@ $total_sum = 0;
             </div>
 
             <?php if (isset($_SESSION['user_id'])): ?>
-                <form action="/ws/checkout.php" method="POST">
+                <form action="checkout.php" method="POST">
                     <button type="submit" class="btn-buy" style="font-size: 22px;">ОФОРМИТЬ ЗАКАЗ</button>
                 </form>
             <?php else: ?>
-                <a href="/ws/auth/login.php" class="btn-buy" style="font-size: 20px; display: block; text-decoration: none;">
+                <a href="auth/login.php" class="btn-buy" style="font-size: 20px; display: block; text-decoration: none;">
                     ВОЙДИТЕ, ЧТОБЫ КУПИТЬ
                 </a>
             <?php endif; ?>

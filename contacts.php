@@ -72,7 +72,7 @@ include 'includes/header.php';
             <?php else: ?>
                 <div class="chat-auth-prompt">
                     <p>ЧАТ ДОСТУПЕН ТОЛЬКО АВТОРИЗОВАННЫМ КЛИЕНТАМ</p>
-                    <a href="/ws/auth/login.php" class="btn-buy" style="display: inline-block; width: auto; padding: 15px 40px; margin-top: 20px;">
+                    <a href="auth/login.php" class="btn-buy" style="display: inline-block; width: auto; padding: 15px 40px; margin-top: 20px;">
                         ВОЙТИ
                     </a>
                 </div>

@@ -30,12 +30,12 @@ include 'includes/header.php';
         
         <!-- Кнопки категорий -->
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="/ws/catalog.php" class="btn-buy" style="width: auto; padding: 12px 30px; text-decoration: none; background: <?php echo !$cat_id ? 'var(--blue)' : 'var(--black)'; ?>;">
+            <a href="catalog.php" class="btn-buy" style="width: auto; padding: 12px 30px; text-decoration: none; background: <?php echo !$cat_id ? 'var(--blue)' : 'var(--black)'; ?>;">
                 ВСЁ СРАЗУ
             </a>
             
             <?php foreach ($categories as $cat): ?>
-                <a href="/ws/catalog.php?category=<?php echo $cat['id']; ?>" 
+                <a href="catalog.php?category=<?php echo $cat['id']; ?>" 
                    class="btn-buy" 
                    style="width: auto; padding: 12px 30px; text-decoration: none; background: <?php echo ($cat_id == $cat['id']) ? 'var(--blue)' : 'var(--black)'; ?>;">
                     <?php echo htmlspecialchars($cat['name']); ?>
@@ -54,13 +54,13 @@ include 'includes/header.php';
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
                     <!-- Ссылка на товар через картинку -->
-                    <a href="/ws/product.php?id=<?php echo $product['id']; ?>">
-                        <img src="/ws/uploads/<?php echo $product['image_url']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
+                    <a href="product.php?id=<?php echo $product['id']; ?>">
+                        <img src="uploads/<?php echo $product['image_url']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
                     </a>
                     
                     <div class="product-info">
                         <!-- Ссылка на товар через заголовок -->
-                        <a href="/ws/product.php?id=<?php echo $product['id']; ?>" style="text-decoration: none; color: inherit;">
+                        <a href="product.php?id=<?php echo $product['id']; ?>" style="text-decoration: none; color: inherit;">
                             <div class="product-title"><?php echo htmlspecialchars($product['title']); ?></div>
                         </a>
                         
